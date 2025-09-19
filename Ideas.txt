@@ -1,0 +1,5 @@
+1. The app is moving/scrolling when I draw
+2. Add more stuff to draw
+3. Add possibility to rotate screen to have bigger drawing space
+4.Make a bigger pattern
+5. Ai actually checks if the position is close to what it should have been.

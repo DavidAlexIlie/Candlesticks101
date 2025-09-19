@@ -1,0 +1,3 @@
+- This is a mobile app
+- stop running the app, I am already running it on port 3000 from my CMD
+- whenver I say add a back button you have to keep the physical phone back button logic intact and working for any new feature

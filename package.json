@@ -3,10 +3,25 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@capacitor-community/admob": "^7.0.3",
+    "@capacitor/android": "^7.2.0",
+    "@capacitor/app": "^7.0.1",
+    "@capacitor/camera": "^7.0.2",
+    "@capacitor/cli": "^7.2.0",
+    "@capacitor/core": "^7.2.0",
+    "@emailjs/browser": "^4.4.1",
+    "@react-financial-charts/axes": "^2.0.0",
+    "@react-financial-charts/core": "^2.0.0",
+    "@react-financial-charts/scales": "^2.0.0",
+    "@react-financial-charts/series": "^2.0.0",
+    "@tensorflow/tfjs": "^4.22.0",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.3.0",
     "@testing-library/user-event": "^13.5.0",
+    "d3": "^7.9.0",
+    "lightweight-charts": "^4.1.0",
+    "lucide-react": "^0.511.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-scripts": "5.0.1",
@@ -35,5 +50,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "typescript": "^5.8.3"
   }
 }
