@@ -1,70 +1,81 @@
-# Getting Started with Create React App
+# 🕯️ CandleSticks101 - Mobile Trading Education App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+CandleSticks101 is a comprehensive **React-based mobile application** designed to teach **candlestick patterns** and **technical analysis** for trading education. It provides interactive lessons, simulators, and AI-powered tools to help beginners and intermediate users understand stock market behavior and practice trading strategies.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Core Features
 
-### `npm start`
+### 📚 Educational Lessons
+- 5 main categories: Basics, Bullish Candlesticks, Bearish Candlesticks, Technical Indicators, Fundamental Analysis  
+- Interactive lecture system with detailed explanations  
+- Beginner-friendly content covering essential trading terminology and patterns  
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 📊 Interactive Simulator
+- Real-time candlestick pattern simulation with animated reveals  
+- User prediction system (UP/DOWN choices) with scoring  
+- Continuous chart progression; patterns flow naturally  
+- Smart chart scrolling to keep decision points visible  
+- Animated candlestick reveals (500ms intervals) for realistic market feel  
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 📱 Real Market Data Integration
+- Simulated real-time stock data for popular stocks (AAPL, GOOGL, MSFT, TSLA, etc.)  
+- Customizable watchlist functionality  
+- 30-day candlestick charts with professional market statistics  
+- Practice mode integration: real market data transferred to simulator  
 
-### `npm test`
+### ✏️ Chart Drawing Practice
+- Pre-generated realistic trading patterns (Double Bottom, Ascending Triangle, Bull Flag)  
+- 4 drawing tools: Support lines, Resistance lines, Trendlines, Channel lines  
+- AI-powered pattern analysis with educational feedback  
+- Touch and mouse support for mobile/desktop compatibility  
+- Intelligent scoring system for correct technical elements  
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 📸 Pattern Scanner (Camera / Photo Analysis)
+- Live camera integration for analyzing chart screenshots  
+- Photo upload functionality for existing chart images  
+- AI-style pattern recognition with confidence scoring  
+- Detailed analysis results with trading suggestions  
+- Professional feedback system with pattern names and descriptions  
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🛠️ Technical Implementation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Frontend Framework:** React (modern hooks: useState, useEffect, useRef)  
+- **Styling:** Tailwind CSS with dark theme design  
+- **Mobile Optimization:** Responsive design with touch gesture support  
+- **Canvas Integration:** HTML5 Canvas for drawing and chart rendering  
+- **Camera API:** Native browser camera access with photo capture  
+- **State Management:** Complex multi-tab functionality  
+- **UI/UX Design:**  
+  - Dark theme with modern gradient buttons  
+  - 5-tab bottom navigation: Lessons, Simulator, Market, Drawing, Scanner  
+  - Mobile-first design with smooth animations and loading states  
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## 🎓 Educational Value
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Teaches real candlestick patterns used by professional traders  
+- Provides hands-on practice with immediate feedback  
+- Covers technical and fundamental analysis basics  
+- Includes risk management and trading psychology concepts  
+- Suitable for beginners to intermediate traders  
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 🎯 Target Audience
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Aspiring traders  
+- Finance students  
+- Anyone interested in learning technical analysis and stock market patterns  
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## ⚙️ Development Status
+  
+- All major features implemented  
+- Ready for mobile deployment via **Capacitor** or **React Native** conversion  
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
