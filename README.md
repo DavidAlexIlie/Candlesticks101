@@ -1,81 +1,94 @@
-# 🕯️ CandleSticks101 - Mobile Trading Education App
+# Candlesticks101
 
-CandleSticks101 is a comprehensive **React-based mobile application** designed to teach **candlestick patterns** and **technical analysis** for trading education. It provides interactive lessons, simulators, and AI-powered tools to help beginners and intermediate users understand stock market behavior and practice trading strategies.
+A mobile application that teaches candlestick trading patterns and basic technical analysis. Built as a single-developer project using React on the web layer and Capacitor for the Android shell, and published on Google Play.
 
----
+**Live site:** https://davidalexilie.github.io/app/
+**Google Play:** https://play.google.com/store/apps/details?id=com.david.candlesticks101
 
-## 🚀 Core Features
+## Overview
 
-### 📚 Educational Lessons
-- 5 main categories: Basics, Bullish Candlesticks, Bearish Candlesticks, Technical Indicators, Fundamental Analysis  
-- Interactive lecture system with detailed explanations  
-- Beginner-friendly content covering essential trading terminology and patterns  
+Candlesticks101 is an educational tool aimed at beginner-to-intermediate traders. It bundles structured lessons, an interactive simulator, a chart-drawing exercise and a camera-based pattern scanner into a single mobile app, so users can practice with the same patterns and tools professional traders use, without putting capital at risk.
 
-### 📊 Interactive Simulator
-- Real-time candlestick pattern simulation with animated reveals  
-- User prediction system (UP/DOWN choices) with scoring  
-- Continuous chart progression; patterns flow naturally  
-- Smart chart scrolling to keep decision points visible  
-- Animated candlestick reveals (500ms intervals) for realistic market feel  
+## Screenshots
 
-### 📱 Real Market Data Integration
-- Simulated real-time stock data for popular stocks (AAPL, GOOGL, MSFT, TSLA, etc.)  
-- Customizable watchlist functionality  
-- 30-day candlestick charts with professional market statistics  
-- Practice mode integration: real market data transferred to simulator  
+| Lessons | Simulator | Market |
+| :---: | :---: | :---: |
+| <img src="screenshots/lessons.png" width="240" alt="Lessons screen" /> | <img src="screenshots/simulator.png" width="240" alt="Simulator screen" /> | <img src="screenshots/market.png" width="240" alt="Market screen" /> |
 
-### ✏️ Chart Drawing Practice
-- Pre-generated realistic trading patterns (Double Bottom, Ascending Triangle, Bull Flag)  
-- 4 drawing tools: Support lines, Resistance lines, Trendlines, Channel lines  
-- AI-powered pattern analysis with educational feedback  
-- Touch and mouse support for mobile/desktop compatibility  
-- Intelligent scoring system for correct technical elements  
+| Drawing | Quiz | Scanner |
+| :---: | :---: | :---: |
+| <img src="screenshots/drawing.png" width="240" alt="Drawing screen" /> | <img src="screenshots/quiz.png" width="240" alt="Quiz screen" /> | <img src="screenshots/scanner.png" width="240" alt="Pattern scanner screen" /> |
 
-### 📸 Pattern Scanner (Camera / Photo Analysis)
-- Live camera integration for analyzing chart screenshots  
-- Photo upload functionality for existing chart images  
-- AI-style pattern recognition with confidence scoring  
-- Detailed analysis results with trading suggestions  
-- Professional feedback system with pattern names and descriptions  
+## Features
 
----
+### Educational lessons
+Five categories: basics, bullish patterns, bearish patterns, technical indicators, and fundamental analysis. Each lesson is delivered as an interactive lecture with worked examples and beginner-friendly explanations of trading terminology.
 
-## 🛠️ Technical Implementation
+### Interactive simulator
+Animated candlestick reveals at fixed intervals, up/down prediction prompts with a running score, and continuous chart progression so patterns flow naturally. Adaptive scrolling keeps the active decision point visible at all times.
 
-- **Frontend Framework:** React (modern hooks: useState, useEffect, useRef)  
-- **Styling:** Tailwind CSS with dark theme design  
-- **Mobile Optimization:** Responsive design with touch gesture support  
-- **Canvas Integration:** HTML5 Canvas for drawing and chart rendering  
-- **Camera API:** Native browser camera access with photo capture  
-- **State Management:** Complex multi-tab functionality  
-- **UI/UX Design:**  
-  - Dark theme with modern gradient buttons  
-  - 5-tab bottom navigation: Lessons, Simulator, Market, Drawing, Scanner  
-  - Mobile-first design with smooth animations and loading states  
+### Real market data
+Live data feed for major tickers (AAPL, GOOGL, MSFT, TSLA and others), customizable watchlist, and 30-day candlestick charts with summary statistics. Real data can be piped into the simulator for practice on actual price action.
 
----
+### Chart drawing practice
+Pre-generated patterns including Double Bottom, Ascending Triangle, and Bull Flag, with four drawing tools (support, resistance, trendline, channel). The user's drawing is graded against the expected geometry, with feedback on what was correct and what was missed.
 
-## 🎓 Educational Value
+### Pattern scanner
+Live camera capture or photo upload of a chart on screen. The captured image is processed by a YOLO-based detection service and returns identified patterns with a confidence score and a short trading note.
 
-- Teaches real candlestick patterns used by professional traders  
-- Provides hands-on practice with immediate feedback  
-- Covers technical and fundamental analysis basics  
-- Includes risk management and trading psychology concepts  
-- Suitable for beginners to intermediate traders  
+## Tech stack
 
----
+- **Frontend:** React with hooks, React 19
+- **Styling:** Tailwind CSS
+- **Mobile shell:** Capacitor (Android)
+- **Charts:** lightweight-charts, @react-financial-charts
+- **ML on-device:** TensorFlow.js (TFJS)
+- **Canvas:** HTML5 Canvas for drawing and chart rendering
+- **Camera:** Web Camera API via Capacitor Camera plugin
+- **Backend (pattern scanner):** Python FastAPI service using a YOLO model, in `chart-analyzer-api/`
+- **Monetization:** Capacitor AdMob plugin
 
-## 🎯 Target Audience
+## Repository layout
 
-- Aspiring traders  
-- Finance students  
-- Anyone interested in learning technical analysis and stock market patterns  
+| Path | Purpose |
+| --- | --- |
+| `src/` | React app source. Entry point is `App.js`. |
+| `public/` | Static assets and the HTML shell. |
+| `android/` | Capacitor Android project. |
+| `chart-analyzer-api/` | FastAPI service that backs the Pattern Scanner. |
+| `screenshots/` | Marketing screenshots used in this README. |
+| `capacitor.config.ts` | Capacitor configuration. |
+| `tailwind.config.js` | Tailwind theme. |
 
----
+## Local development
 
-## ⚙️ Development Status
-  
-- All major features implemented  
-- Ready for mobile deployment via **Capacitor** or **React Native** conversion  
+Prerequisites: Node.js 18+ and a JDK 17 installation if building the Android project.
 
----
+```bash
+npm install
+npm start
+```
+
+To produce the Android build:
+
+```bash
+npm run build
+npx cap sync android
+npx cap open android
+```
+
+The Pattern Scanner backend lives in `chart-analyzer-api/` and is run separately:
+
+```bash
+cd chart-analyzer-api
+pip install -r requirements.txt
+uvicorn main:app --reload
+```
+
+## Status
+
+All planned features are implemented and the app is live on Google Play. Maintained as a single-developer project; ongoing work focuses on content updates and pattern coverage rather than new top-level features.
+
+## Author
+
+David Ilie - [github.com/DavidAlexIlie](https://github.com/DavidAlexIlie) - [davidalexilie.github.io](https://davidalexilie.github.io/)
